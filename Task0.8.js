@@ -2,11 +2,13 @@ function timeConverter(num){
     if (num == 0){
         console.log(num, "hours,", num, "minutes")
     }else if (num == 60){
-        console.log(num, " hours,", "0 minutes");
+        console.log(num, " hours, 0 minutes");
     }else if (num == 1){
-        console.log("0 hours, ", num + " minute");
+        console.log("0 hours,", num + " minute");
+    }else if (num == 60){
+        console.log("1 hour, 0 minutes");
     }else if (num < 60){
-        console.log("0 hours, ", num + " minutes");
+        console.log("0 hours,", num + " minutes");
     }else if (num > 60){
         var amountOfMinutes = num%60;
         var amountOfHours = ((num-amountOfMinutes)/60);
@@ -27,7 +29,7 @@ function timeConverter(num){
     }
 }
 
-timeConverter(62);
+timeConverter(60);
 timeConverter(61);
 timeConverter(51);
 timeConverter(0);
