@@ -29,4 +29,6 @@ function timeConverter(num){
     }
 }
 
-timeConverter(121);
+timeConverter(62);
+timeConverter(61);
+
