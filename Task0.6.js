@@ -1,29 +1,31 @@
 function maximum(p, q, r){
     if (p > q){
         if (p > r){
-            console.log(p);
+            return p;
         }else{
-            console.log(r);
+            return r;
         }
     }else if (q > p){
         if (q > r){
-            console.log(q);
+            return q;
         }else {
-            console.log(r);
+            return r;
         }
     }else if (r > p){
         if (r > q){
-            console.log(r);
+            return r;
         }else {
-            console.log(q);
+            return q;
         }
     }else if (r > q){
         if (r > p){
-            console.log(r);
+            return r;
         }else {
-            console.log(p);
+            return p;
         }
+    }else if ((r == p)||(r == q)||(p==q)){
+        return r;
     }
 }
 
-maximum(1, 29, 17);
+maximum(29, 29, 29);

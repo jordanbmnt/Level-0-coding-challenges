@@ -3,7 +3,8 @@ function commonChar(input1, input2){
     input2Char = [];
     input1CharCount = [];
     input2CharCount = [];
-    commonCharArr = []
+    commonCharArr = [];
+    uniqueCharArr = [];
     counter = 0;
 
     
@@ -24,7 +25,14 @@ function commonChar(input1, input2){
             }
         }
     }
-    console.log("Commone letters: ", commonCharArr.toString(counter));
+
+    for(var i=0; i < commonCharArr.length; i++){
+        if(uniqueCharArr.indexOf(commonCharArr[i]) == -1){
+            uniqueCharArr.push(commonCharArr[i])
+        }
+    }
+    
+    console.log("Common letters: ", uniqueCharArr.toString(counter));
 }
 
 commonChar("house", "computers");
